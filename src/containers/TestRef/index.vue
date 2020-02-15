@@ -3,6 +3,7 @@
     <h3>Test Ref</h3>
     <input type="text" v-model="value">
     {{value}}
+    <p>{{newValue}}</p>
     <div>
       <p>{{count}}</p>
       <button @click="onClick(true)">+</button>
@@ -20,12 +21,19 @@
       const onClick = (isAdd) => {
         isAdd ? count.value++ : count.value -- 
       }
+      const objRef = ref({a: 1213})
+      console.log(objRef.value)
       return {
         value,
         count,
-        onClick
+        onClick,
       }
-    }
+    },
+    computed: {
+      newValue() {
+        return 'newValue:'+this.value
+      }
+    },
   }
 </script>
 <style lang="css" scoped>

@@ -15,19 +15,26 @@
 <script>
   import {ref} from 'vue'
   import TestRef from './TestRef'
+  import TestReactive from './TestReactive'
+  import TestSetup from './TestSetup'
+  import TestLogicReuse from './TestLogicReuse'
+  
 
   export default {
-    components: {TestRef},
+    components: {TestRef, TestReactive, TestSetup, TestLogicReuse},
     setup() {
       const routes = [
-        {name: 'ref', component: 'TestRef'}
+        {name: 'setup', component: 'TestSetup'},
+        {name: 'reactive', component: 'TestReactive'},
+        {name: 'ref', component: 'TestRef'},
+        {name: 'logicReuse', component: 'TestLogicReuse'},
       ]
       const activeCom = ref(routes[0].name)
       const onClick = (r) => {
-        activeCom.value = routes.component
+        activeCom.value = r.name
       }
-      
-      return {routes, activeCom};
+
+      return {routes, activeCom, onClick};
     }
   }
 </script>
@@ -38,7 +45,9 @@
       padding: 0;
       
       .li {
-        display: inline-block
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
       }
       .active {
         color: #00f;
