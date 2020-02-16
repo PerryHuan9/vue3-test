@@ -18,16 +18,30 @@
   import TestReactive from './TestReactive'
   import TestSetup from './TestSetup'
   import TestLogicReuse from './TestLogicReuse'
+  import TestReadonly from './TestReadonly'
+  import TestWatch from './TestWatch'
+  import TestTemplateRef from './TestTemplateRef'
   
 
   export default {
-    components: {TestRef, TestReactive, TestSetup, TestLogicReuse},
+    components: {
+      TestRef, 
+      TestReactive, 
+      TestSetup,
+      TestLogicReuse, 
+      TestReadonly,
+      TestWatch,
+      TestTemplateRef
+    },
     setup() {
       const routes = [
         {name: 'setup', component: 'TestSetup'},
         {name: 'reactive', component: 'TestReactive'},
         {name: 'ref', component: 'TestRef'},
         {name: 'logicReuse', component: 'TestLogicReuse'},
+        {name: 'readonly', component: 'TestReadonly'},
+        {name: 'watch', component: 'TestWatch'},
+        {name: 'templateRef', component: 'TestTemplateRef'},
       ]
       const activeCom = ref(routes[0].name)
       const onClick = (r) => {
