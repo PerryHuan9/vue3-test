@@ -21,6 +21,7 @@
   import TestReadonly from './TestReadonly'
   import TestWatch from './TestWatch'
   import TestTemplateRef from './TestTemplateRef'
+  import TestProvideInject from './TestProvideInject'
   
 
   export default {
@@ -31,7 +32,8 @@
       TestLogicReuse, 
       TestReadonly,
       TestWatch,
-      TestTemplateRef
+      TestTemplateRef,
+      TestProvideInject
     },
     setup() {
       const routes = [
@@ -42,6 +44,7 @@
         {name: 'readonly', component: 'TestReadonly'},
         {name: 'watch', component: 'TestWatch'},
         {name: 'templateRef', component: 'TestTemplateRef'},
+        {name: 'provide & inject', component: 'TestProvideInject'},
       ]
       const activeCom = ref(routes[0].name)
       const onClick = (r) => {
