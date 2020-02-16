@@ -1,5 +1,19 @@
-# vue-next-webpack-preview
+# 学习vue3的代码
 
-Minimal webpack setup for Vue 3 (alpha). This is for preview purposes only. There might be bugs and undocumented behavior differences from v2, which are expected.
+### 下载代码
+```
+git clone git@github.com:PerryHuan9/vue3-test.git
+```
 
-Also note that if you are using VSCode, Vetur isn't updated to take advantage of Vue 3's typing yet so intellisense in Vue files may not be fully functional (especially in templates).
+### 安装依赖
+```
+yarn add 
+```
+
+### 运行
+```
+yarn run dev
+```
+
+
+
